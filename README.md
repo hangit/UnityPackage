@@ -39,10 +39,10 @@ To activate HangIt in your project, you include a few simple function calls:
 
 Your will need to create an account and login to https://portal.hangit.com to create an app and generate your App ID Key set in the HangitData asset.
 
- At the very start of your application's execution, initialize the HangIt API by calling `Hangit.StartLocation();`.
+ At the very start of your application's execution, initialize the HangIt API by calling `Hangit.StartLocation();`:
 
-  // start Hangit
-  Hangit.StartLocation();
+  	// start Hangit
+  	Hangit.StartLocation();
   
 ### Opening the Wallet ###
 
@@ -55,15 +55,15 @@ If your application needs to open the HangIt wallet, call the `Hangit.OpenWallet
 
 During testing, you may need to clear the device in order to test a location based notification or offer a second time.  This is done with the `Hangit.ClearDevice();` function:
 
-		// clear device to test location based notifications again
-		Hangit.ClearDevice();
+	// clear device to test location based notifications again
+	Hangit.ClearDevice();
 
 If you would like to offer an option for users of your app to pause the Hangit SDK you can call the `Hangit.StopLocation();` method at any time after initialization:
 
-  // stop Hangit
-  Hangit.StopLocation();
+  	// stop Hangit
+  	Hangit.StopLocation();
   
-Once integration is complete you can go to Build Settings and run and build your Unity app and begin testing our SDK
+Once integration is complete you can go to Build Settings and run and build your Unity app and begin testing our SDK.
 
 ### For Projects Targeting iOS ###
 
