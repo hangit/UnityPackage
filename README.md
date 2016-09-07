@@ -30,6 +30,41 @@ A complete sample class demonstrating the functions of the API is available in t
 5. Using the Inspector set your Hangit SDK options for Autostart, Present Notifications and Present Offer View. These are on by default to give the full experience of the Hangit SDK.
 6. We have provided an example under /iOS/Hangit/HangitExample.cs 
 
+<a id="integration"></a>
+## Integration ##
+
+To activate HangIt in your project, you include a few simple function calls:
+
+### Initialize the HangIt API ###
+
+Your will need to create an account and login to https://portal.hangit.com to create an app and generate your App ID Key set in the HangitData asset.
+
+ At the very start of your application's execution, initialize the HangIt API by calling `Hangit.StartLocation();`.
+
+  // start Hangit
+  Hangit.StartLocation();
+  
+### Opening the Wallet ###
+
+If your application needs to open the HangIt wallet, call the `Hangit.OpenWallet();` method at any time after initialization:
+
+	// open wallet
+	Hangit.OpenWallet();
+
+### Clearing the Device ###
+
+During testing, you may need to clear the device in order to test a location based notification or offer a second time.  This is done with the `Hangit.ClearDevice();` function:
+
+		// clear device to test location based notifications again
+		Hangit.ClearDevice();
+
+If you would like to offer an option for users of your app to pause the Hangit SDK you can call the `Hangit.StopLocation();` method at any time after initialization:
+
+  // stop Hangit
+  Hangit.StopLocation();
+  
+Once integration is complete you can go to Build Settings and run and build your Unity app and begin testing our SDK
+
 ### For Projects Targeting iOS ###
 
 To use the Package for iOS, you'll need to include the *NSAppTransportSecurity* data show below into your Application, set the `MinimumOSVersion` to 8.0, and include the required `UIBackgroundModes` and `NSLocationWhenInUseUsageDescription` and `NSLocationAlwaysUsageDescription` values:
@@ -120,39 +155,3 @@ In order to use the Package on Android, you'll need to update the `manifestAddit
 			</manifest>			
 		]]></manifestAdditions>
     </android>
-
-<a id="integration"></a>
-## Integration ##
-
-To activate HangIt in your project, you include a few simple function calls:
-
-### Initialize the HangIt API ###
-
-Your will need to create an account and login to https://portal.hangit.com to create an app and generate your App ID Key set in the HangitData asset.
-
- At the very start of your application's execution, initialize the HangIt API by calling `Hangit.StartLocation();`.
-
-  // start Hangit
-  Hangit.StartLocation();
-  
-### Opening the Wallet ###
-
-If your application needs to open the HangIt wallet, call the `Hangit.OpenWallet();` method at any time after initialization:
-
-	// open wallet
-	Hangit.OpenWallet();
-
-### Clearing the Device ###
-
-During testing, you may need to clear the device in order to test a location based notification or offer a second time.  This is done with the `Hangit.ClearDevice();` function:
-
-		// clear device to test location based notifications again
-		Hangit.ClearDevice();
-
-If you would like to offer an option for users of your app to pause the Hangit SDK you can call the `Hangit.StopLocation();` method at any time after initialization:
-
-  // stop Hangit
-  Hangit.StopLocation();
-  
-Once integration is complete you can go to Build Settings and run and build your Unity app and begin testing our SDK
-
