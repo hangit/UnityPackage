@@ -14,7 +14,7 @@
 
 This Package allows you to use the HangIt SDK in Unity mobile applications.
 
-A complete sample class demonstrating the functions of the API is available in the `/library` folder.
+A complete sample class demonstrating the functions of the SDK is available in `/iOS/Hangit/HangitExample.cs`.
 
 <a id="include"></a>
 ## Include the HangIt library ##
